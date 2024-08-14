@@ -11,5 +11,10 @@ import List from "./List/List";
 import History from "./History/History";
 import Post_liked_marked from "./Post_liked_marked/Post_liked_marked";
 import Post_Repost_liked_marked from "./Post Repost_liked_marked/Post_Repost_liked_marked";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import UserPosts from "./UserPosts.tsx/UserPosts";
+import Bio from "./Bio/Bio";
 
-export {Input, Button, Heading, RegistrationInfo, Span, Paragraph, Navbar, Image, WhatsNew, List, History, Post_liked_marked, Post_Repost_liked_marked};
+export {Input, Button, Heading, RegistrationInfo, Span, Paragraph, Navbar, Image,
+     WhatsNew, List, History, Post_liked_marked, Post_Repost_liked_marked, ProfileHeader, UserPosts,
+    Bio};

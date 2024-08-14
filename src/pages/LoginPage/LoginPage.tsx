@@ -9,34 +9,13 @@ export const LoginPage = () => {
       <form action="#">
         <Input type={"tel"} placeholder={"Номер телефона"}/>
         <Input type={"password"} placeholder={"Пароль"}/>
-        <Button type={"button"} text={"Войти"}/>
+        <Link to="/main"><Button type={"button"} text={"Войти"}/></Link>
       </form>
       <Link to="/">Забыли пароль?</Link>
       <RegistrationInfo
       authWithText={"Войти с помощью"}
       hasAccountText={"У вас нет аккаунта?" }
       linkText={"Зарегистрироваться"}/>
-    
-      {/* <div className="registration">
-        <span>
-          У вас нет аккаунта? <a href="#">Зарегистрироваться</a>
-        </span>
-        <p>Войти с помощью</p>
-        <div className="icons-wrapper">
-          <a className="reg__link google-link" href="#">
-            <img src="./img/icons/google.svg" alt="Google" />
-          </a>
-          <a className="reg__link google-plus-link" href="#">
-            <img src="./img/icons/google-plus.svg" alt="Google Plus" />
-          </a>
-          <a className="reg__link yandex-link" href="#">
-            <img src="./img/icons/yandex.svg" alt="Yandex" />
-          </a>
-          <a className="reg__link mail-ru-link" href="#">
-            <img src="./img/icons/mail-ru.svg" alt="Mail.ru" />
-          </a>
-        </div>
-      </div> */}
     </div>
   );
 };

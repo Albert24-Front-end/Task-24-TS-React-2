@@ -1,80 +1,78 @@
 import Heading from "../typography/Heading/Heading";
-import Span from "../typography/Span/Span";
+import ListItem from "./ListItem";
+import {listData} from "./Data"
 
-const List =()=>{
-    return(
-        <div className="List">
+const { subscribes, closeFriends, music } = listData
+
+interface ListProps {
+  listType: "subscribes" | "music" | "closeFriends";
+  isOnline?: boolean;
+  isActive?: boolean;
+}
+
+const List =({listType}: ListProps)=>{
+  const renderList =()=> {
+  switch (listType) {
+    case "subscribes":
+    return (
+      <div className="List">
           <div className="List__title">
             <Heading variant="h2" text="Подписки"/>
-            {/* <h2>Подписки</h2> */}
-            <Span className={"count"} children={123}/>
-            {/* <span className="count">123</span> */}
+            <span className="count">
+              {subscribes ? subscribes.length : ""}
+            </span>
           </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-1.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">N E W</p>
-              <p className="secondary__text">Развитие</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-2.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">Aesthetics</p>
-              <p className="secondary__text">Стиль</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-3.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">дом твоей эстетики</p>
-              <p className="secondary__text">Творчество</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-4.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">wailet</p>
-              <p className="secondary__text">Искусство</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-5.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">A W E S O M E</p>
-              <p className="secondary__text">Стиль</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-6.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">minimalism</p>
-              <p className="secondary__text">Фотография</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-7.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">Словарный запасE</p>
-              <p className="secondary__text">Литература</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
-          <div className="UserElem">
-            <img src="./img/profile/profile-img-8.jpeg" alt="User" />
-            <div className="user__description">
-              <p className="main__text">Look</p>
-              <p className="secondary__text">Мода</p>
-            </div>
-            <span className="Badge">3</span>
-          </div>
+          {subscribes && subscribes.map((userElem) => (
+            <ListItem
+            imgUrl={userElem.imgUrl}
+            alt={userElem.alt}
+            mainText={userElem.mainText}
+            secondaryText={userElem.secondaryText}
+            badgeNumber={userElem.badgeNumber}/>
+          ))}
         </div>
-    );
+    )
+    case "music":
+    return (
+      <div className="MusicBlock">
+          <div className="MusicBlock__title">
+          <Heading variant="h2" text="Вы недавно слушали"/>
+            <span className="count">{music ? music.length : ""}</span>
+          </div>
+          {music && music.map((musicElem)=>(
+            <ListItem
+            imgUrl={musicElem.imgUrl}
+            alt={musicElem.alt}
+            mainText={musicElem.mainText}
+            secondaryText={musicElem.secondaryText}
+            isActive={musicElem.isActive}/>
+          ))}
+        </div>
+    )
+
+    case "closeFriends":
+    return (
+      <div className="List">
+          <div className="List__title">
+            <Heading variant="h2" text="Близкие друзья"/>
+            <span className="count">
+              {closeFriends ? closeFriends.length : ""}
+            </span>
+          </div>
+          {closeFriends && closeFriends.map((userElem) => (
+            <ListItem
+            isOnline={userElem.isOnline}
+            imgUrl={userElem.imgUrl}
+            alt={userElem.alt}
+            mainText={userElem.mainText}
+            secondaryText={userElem.secondaryText}
+            badgeNumber={userElem.badgeNumber}/>
+          ))}
+        </div>
+    )
+    default:
+    break;
+  }}
+    return renderList()
 };
 export default List

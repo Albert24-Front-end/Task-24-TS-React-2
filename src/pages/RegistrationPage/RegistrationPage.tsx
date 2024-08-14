@@ -27,7 +27,7 @@ export const RegistrationPage = () => {
         <Input type={"email"} placeholder={"Электроннная почта"}/>
         <Input type={"tel"} placeholder={"Номер телефона"}/>
         <Input type={"password"} placeholder={"Пароль"}/>
-        <Link to="/login"><Button type={"button"} text={"Зарегистрироваться"}/></Link>
+        <Button type={"button"} text={"Зарегистрироваться"}/>
       </form>
       </div>
     );
