@@ -1,4 +1,6 @@
-.ProfilePage {
+import styled from "styled-components";
+
+export const SCProfilePage = styled.div`
   display: grid;
   grid-template-areas:
     "L P P"
@@ -49,7 +51,6 @@
       margin-bottom: 20px;
     }
   }
-}
 
 @media (max-width: 1440px) {
   .ProfilePage {
@@ -1079,3 +1080,4 @@
     }
   }
 }
+`

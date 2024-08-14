@@ -1,5 +1,7 @@
-.LoginPage {
-  box-shadow: 0 0 10px var(--light-gray);
+import styled from "styled-components";
+
+export const SCLoginPage = styled.div`
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   border-radius: 20px;
   background-color: var(--elems-bgc);
   margin: 0 auto;
@@ -7,7 +9,7 @@
   max-width: 500px;
   text-align: center;
   padding: 40px;
-
+// все цвета как lightGray
   h1 {
     margin-bottom: 50px;
   }
@@ -44,7 +46,7 @@
       text-decoration: underline;
     }
   }
-}
+
 
 @media (max-width: 530px) {
   .LoginPage {
@@ -101,3 +103,4 @@
     object-fit: cover;
   }
 }
+`

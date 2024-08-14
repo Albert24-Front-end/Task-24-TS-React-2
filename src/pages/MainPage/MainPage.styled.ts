@@ -1,4 +1,6 @@
-.MainPage {
+import styled from "styled-components";
+
+export const SCMainPage = styled.div`
   display: grid;
   grid-template-areas: "L M R";
   grid-template-columns: minmax(300px, 360px) auto minmax(300px, 360px);
@@ -23,7 +25,7 @@
       margin-bottom: 20px;
     }
   }
-}
+
 
 @media (max-width: 1440px) {
   .MainPage {
@@ -818,3 +820,4 @@
     }
   }
 }
+`

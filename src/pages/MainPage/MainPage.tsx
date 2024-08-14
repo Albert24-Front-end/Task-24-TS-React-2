@@ -1,9 +1,10 @@
 import { List, Navbar, WhatsNew, History, Post_liked_marked, Post_Repost_liked_marked } from "../../components";
-import "./MainPage.scss";
+// import "./MainPage.scss";
+import { SCMainPage } from "./MainPage.styled";
 
 export const MainPage = () => {
   return (
-    <div className="MainPage">
+    <SCMainPage>
       <aside className="LeftSide">
         <Navbar/>
         <List listType="subscribes"/>
@@ -72,7 +73,6 @@ export const MainPage = () => {
           </div>
         </div> */}
       </aside>
-    </div>
+    </SCMainPage>
   );
 };
-// последние два className List & MusicBlock делать не нужно

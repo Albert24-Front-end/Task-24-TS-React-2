@@ -45,6 +45,7 @@ const List =({listType}: ListProps)=>{
             alt={musicElem.alt}
             mainText={musicElem.mainText}
             secondaryText={musicElem.secondaryText}
+            badgeNumber={musicElem.badgeNumber | 5}
             isActive={musicElem.isActive}/>
           ))}
         </div>

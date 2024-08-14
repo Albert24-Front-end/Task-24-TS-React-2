@@ -1,11 +1,14 @@
-import "./ProfilePage.scss";
+
 import { Navbar, List, WhatsNew, Post_liked_marked, Post_Repost_liked_marked, ProfileHeader, UserPosts, Bio} from "../../components";
+import { SCProfilePage } from "./ProfilePage.styled";
+import { Header } from "../../components/UI/Header/Header";
 
 
 
 export const ProfilePage = () => {
   return (
-    <div className="ProfilePage">
+    <SCProfilePage>
+      <Header/>
       <aside className="LeftSide">
       <Navbar/>
       {/* <nav className="Navbar">
@@ -844,6 +847,6 @@ export const ProfilePage = () => {
           </div>
         </div> */}
       </aside>
-    </div>
+    </SCProfilePage>
   );
 };

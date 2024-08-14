@@ -1,10 +1,10 @@
-import "./LoginPage.scss";
 import { Input, Button, Heading, RegistrationInfo } from "../../components"
 import { Link } from "react-router-dom";
+import { SCLoginPage } from "./LoginPage.styled";
 
 export const LoginPage = () => {
   return (
-    <div className="LoginPage">
+    <SCLoginPage>
       <Heading variant={"h1"} text={"Авторизация"}/>
       <form action="#">
         <Input type={"tel"} placeholder={"Номер телефона"}/>
@@ -16,6 +16,6 @@ export const LoginPage = () => {
       authWithText={"Войти с помощью"}
       hasAccountText={"У вас нет аккаунта?" }
       linkText={"Зарегистрироваться"}/>
-    </div>
+    </SCLoginPage>
   );
 };
