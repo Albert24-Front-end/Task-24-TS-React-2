@@ -18,7 +18,7 @@ const ListItem = ({ imgUrl, alt, mainText, secondaryText, badgeNumber, isOnline,
       {badgeNumber !==  null  &&  badgeNumber !== undefined && (
         <span className="Badge">{badgeNumber}</span>
       )}
-      <div className={`plus-button ${isActive ? 'active' : ""}`}></div>
+      <div className={`plus-button ${isActive === true ? '_active' : ""}`}></div>
     </div>
   );
 };

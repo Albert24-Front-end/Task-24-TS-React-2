@@ -80,11 +80,11 @@ export const SCProfilePage = styled.div`
 }
 
 .Navbar {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   border-radius: 20px;
   padding: calc(1vw + 11px);
-  background-color: var(--elems-bgc);
-  color: var(--text-color);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
+  color: ${(props) => props.theme.colors.textColor};
 
   .navbar__list {
     display: flex;
@@ -107,7 +107,7 @@ export const SCProfilePage = styled.div`
       flex: 0 1 25px;
       height: calc(1vw + 5px); //? 1440 - 20 | 1920 - 25
       object-fit: contain;
-      fill: var(--prime-color);
+      fill: ${(props) => props.theme.colors.primeColor};
     }
 
     .item__name {
@@ -115,12 +115,12 @@ export const SCProfilePage = styled.div`
     }
 
     &:hover {
-      background-color: var(--light-gray);
+      background-color: ${(props) => props.theme.colors.lightGray};
     }
 
     &:active {
       transition: 100ms;
-      background-color: var(--prime-color);
+      background-color: ${(props) => props.theme.colors.primeColor};
       color: white;
 
       .icon {
@@ -129,7 +129,7 @@ export const SCProfilePage = styled.div`
 
       .Badge {
         background-color: white;
-        color: var(--text-color);
+        color: ${(props) => props.theme.colors.textColor};
       }
     }
   }
@@ -169,8 +169,8 @@ export const SCProfilePage = styled.div`
   height: 440px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: var(--elems-bgc);
-  box-shadow: 0 0 10px var(--light-gray);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   position: relative;
 
   .icon-edit {
@@ -187,7 +187,7 @@ export const SCProfilePage = styled.div`
     transition: 200ms;
 
     &:hover {
-      filter: drop-shadow(0 0 10px var(--prime-color));
+      filter: drop-shadow(0 0 10px ${(props) => props.theme.colors.primeColor});
     }
 
     &:active {
@@ -201,7 +201,7 @@ export const SCProfilePage = styled.div`
     align-items: center;
 
     gap: calc(3.8vw - 34px); //? 40 - 1920 | 20 - 1400
-    border-top: 1px solid var(--light-gray);
+    border-top: 1px solid ${(props) => props.theme.colors.lightGray};
     padding-top: 20px;
 
     .parameter {
@@ -215,11 +215,11 @@ export const SCProfilePage = styled.div`
       transition: 200ms;
 
       &:hover {
-        background-color: var(--light-gray);
+        background-color: ${(props) => props.theme.colors.lightGray};
       }
 
       .value {
-        color: var(--gray);
+        color: ${(props) => props.theme.colors.gray};
       }
     }
   }
@@ -260,7 +260,7 @@ export const SCProfilePage = styled.div`
   width: 100%;
   padding: 20px;
   padding-left: calc(3.9vw + 165px); //? 180 - 375 | 240 - 1920
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
 
   display: flex;
@@ -271,7 +271,7 @@ export const SCProfilePage = styled.div`
     width: calc(3.2vw + 113px); //? 125 - 375 | 175 - 1920
     height: calc(3.2vw + 113px); //? 125 - 375 | 175 - 1920
     object-fit: cover;
-    border: 5px solid var(--elems-bgc);
+    border: 5px solid ${(props) => props.theme.colors.elemsBgc};
     border-radius: 50%;
 
     position: absolute;
@@ -346,7 +346,7 @@ export const SCProfilePage = styled.div`
 }
 
 .List {
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
   padding: calc(1vw + 11px);
 
@@ -374,19 +374,19 @@ export const SCProfilePage = styled.div`
   transition: 200ms;
 
   &:hover {
-    background-color: var(--light-gray);
+    background-color: ${(props) => props.theme.colors.lightGray};
   }
 
   &:active {
     transition: 100ms;
-    background-color: var(--prime-color);
+    background-color: ${(props) => props.theme.colors.primeColor};
     p {
       color: white;
     }
 
     .Badge {
       background-color: white;
-      color: var(--text-color);
+      color: ${(props) => props.theme.colors.textColor};
     }
   }
 
@@ -397,7 +397,7 @@ export const SCProfilePage = styled.div`
       content: "";
       height: 1px;
       width: 80%;
-      background-color: var(--light-gray);
+      background-color: ${(props) => props.theme.colors.lightGray};
 
       position: absolute;
       bottom: -8px;
@@ -425,14 +425,14 @@ export const SCProfilePage = styled.div`
 
   .secondary__text {
     &._online {
-      color: var(--green);
+      color: ${(props) => props.theme.colors.green};
     }
   }
 }
 
 .WhatsNew {
-  box-shadow: 0 0 10px var(--light-gray);
-  background-color: var(--elems-bgc);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -464,20 +464,20 @@ export const SCProfilePage = styled.div`
       width: 24px;
       border: 1px solid transparent;
       border-radius: 10px;
-      fill: var(--prime-color);
+      fill: ${(props) => props.theme.colors.primeColor};
       padding: 10px;
       box-sizing: content-box;
 
       transition: 200ms;
 
       &:hover {
-        border-color: var(--light-gray);
-        background-color: var(--bgc);
+        border-color: ${(props) => props.theme.colors.lightGray};
+        background-color: ${(props) => props.theme.colors.bgc};
       }
 
       &:active {
         transition: 100ms;
-        background-color: var(--prime-color);
+        background-color: ${(props) => props.theme.colors.primeColor};
         fill: white;
       }
     }
@@ -491,9 +491,9 @@ export const SCProfilePage = styled.div`
 }
 
 .UserPosts {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   padding: calc(1vw + 11px);
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
   position: relative;
 
@@ -501,7 +501,7 @@ export const SCProfilePage = styled.div`
     width: 20px;
     height: 20px;
     transition: 200ms;
-    fill: var(--prime-color);
+    fill: ${(props) => props.theme.colors.primeColor};
   }
 
   &__controls {
@@ -527,17 +527,17 @@ export const SCProfilePage = styled.div`
         transition: 200ms;
 
         &._active {
-          border-color: var(--light-gray);
-          background-color: var(--bgc);
+          border-color: ${(props) => props.theme.colors.lightGray};
+          background-color: ${(props) => props.theme.colors.bgc};
         }
 
         &:hover {
-          border-color: var(--light-gray);
-          background-color: var(--bgc);
+          border-color: ${(props) => props.theme.colors.lightGray};
+          background-color: ${(props) => props.theme.colors.bgc};
         }
 
         &:active {
-          background-color: var(--prime-color);
+          background-color: ${(props) => props.theme.colors.primeColor};
           color: white;
           transition: 100ms;
 
@@ -565,17 +565,17 @@ export const SCProfilePage = styled.div`
       .icon {
         width: 15px;
         height: 15px;
-        fill: var(--prime-color);
+        fill: ${(props) => props.theme.colors.primeColor};
       }
 
       &:hover {
-        border-color: var(--light-gray);
-        background-color: var(--bgc);
+        border-color: ${(props) => props.theme.colors.lightGray};
+        background-color: ${(props) => props.theme.colors.bgc};
       }
 
       &:active {
         transition: 100ms;
-        background-color: var(--prime-color);
+        background-color: ${(props) => props.theme.colors.primeColor};
         color: white;
 
         .icon {
@@ -605,18 +605,18 @@ export const SCProfilePage = styled.div`
     .icon {
       width: 15px;
       height: 15px;
-      fill: var(--prime-color);
+      fill: ${(props) => props.theme.colors.primeColor};
       rotate: -90deg;
     }
 
     &:hover {
-      border-color: var(--light-gray);
-      background-color: var(--bgc);
+      border-color: ${(props) => props.theme.colors.lightGray};
+      background-color: ${(props) => props.theme.colors.bgc};
     }
 
     &:active {
       transition: 100ms;
-      background-color: var(--prime-color);
+      background-color: ${(props) => props.theme.colors.primeColor};
       color: white;
 
       .icon {
@@ -627,22 +627,22 @@ export const SCProfilePage = styled.div`
 }
 
 .Post {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   padding: calc(1vw + 11px);
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
   position: relative;
 
   &._liked {
     .icon-wrapper {
       .icon-like {
-        fill: var(--red);
+        fill: ${(props) => props.theme.colors.red};
         stroke: 0;
         stroke-width: 0;
       }
 
       .likes-count {
-        color: var(--red);
+        color: ${(props) => props.theme.colors.red};
       }
     }
   }
@@ -650,7 +650,7 @@ export const SCProfilePage = styled.div`
   &._marked {
     .icon-wrapper {
       .icon-mark {
-        fill: var(--prime-color);
+        fill: ${(props) => props.theme.colors.primeColor};
         stroke: 0;
         stroke-width: 0;
       }
@@ -698,16 +698,16 @@ export const SCProfilePage = styled.div`
   box-sizing: content-box;
   border-radius: 15px;
 
-  fill: var(--dark-gray);
+  fill: ${(props) => props.theme.colors.darkGray};
   transition: 200ms;
 
   &:hover {
-    background-color: var(--light-gray);
+    background-color: ${(props) => props.theme.colors.lightGray};
   }
 
   &:active {
     transition: 100ms;
-    background-color: var(--prime-color);
+    background-color: ${(props) => props.theme.colors.primeColor};
     fill: white;
   }
 }
@@ -740,7 +740,7 @@ export const SCProfilePage = styled.div`
 }
 
 .Repost__wrapper {
-  border-left: 1px solid var(--light-gray);
+  border-left: 1px solid ${(props) => props.theme.colors.lightGray};
   padding-left: 30px;
   margin-left: 30px;
 }
@@ -757,7 +757,7 @@ export const SCProfilePage = styled.div`
   .icon-wrapper {
     cursor: pointer;
     padding: 10px;
-    background-color: var(--bgc);
+    background-color: ${(props) => props.theme.colors.bgc};
     border-radius: 15px;
 
     display: flex;
@@ -773,11 +773,11 @@ export const SCProfilePage = styled.div`
     user-select: none;
 
     &:hover {
-      background-color: var(--light-gray);
+      background-color: ${(props) => props.theme.colors.lightGray};
     }
 
     .count {
-      color: var(--dark-gray);
+      color: ${(props) => props.theme.colors.darkGray};
       font-weight: 400;
     }
 
@@ -789,12 +789,12 @@ export const SCProfilePage = styled.div`
     }
 
     .icon-like {
-      stroke: var(--dark-gray);
+      stroke: ${(props) => props.theme.colors.darkGray};
       stroke-width: 2px;
     }
 
     .icon-mark {
-      stroke: var(--dark-gray);
+      stroke: ${(props) => props.theme.colors.darkGray};
       stroke-width: 2px;
     }
 
@@ -805,14 +805,14 @@ export const SCProfilePage = styled.div`
 }
 
 .bio {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   padding: calc(1vw + 11px);
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   border-radius: 20px;
 
   &__data {
     padding-bottom: 30px;
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
     margin-bottom: 30px;
 
     .icon {
@@ -848,7 +848,7 @@ export const SCProfilePage = styled.div`
 }
 
 .FriendsBlock {
-  background-color: var(--elems-bgc);
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   padding: calc(1vw + 11px);
   border-radius: 20px;
 
@@ -860,7 +860,7 @@ export const SCProfilePage = styled.div`
     justify-content: space-between;
 
     span {
-      color: var(--prime-color);
+      color: ${(props) => props.theme.colors.primeColor};
       font-weight: 400;
     }
   }
@@ -892,8 +892,8 @@ export const SCProfilePage = styled.div`
 }
 
 .MusicBlock {
-  box-shadow: 0 0 10px var(--light-gray);
-  background-color: var(--elems-bgc);
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
+  background-color: ${(props) => props.theme.colors.elemsBgc};
   padding: calc(1vw + 11px);
   border-radius: 20px;
 
@@ -905,7 +905,7 @@ export const SCProfilePage = styled.div`
     justify-content: space-between;
 
     span {
-      color: var(--prime-color);
+      color: ${(props) => props.theme.colors.primeColor};
       font-weight: 400;
     }
   }
@@ -925,7 +925,7 @@ export const SCProfilePage = styled.div`
     transition: 200ms;
 
     &:hover {
-      background-color: var(--light-gray);
+      background-color: ${(props) => props.theme.colors.lightGray};
     }
 
     img {
@@ -949,7 +949,7 @@ export const SCProfilePage = styled.div`
       flex: 0 0 24px;
       height: 24px;
 
-      border: 2px solid var(--prime-color);
+      border: 2px solid ${(props) => props.theme.colors.primeColor};
       border-radius: 50%;
 
       position: relative;
@@ -959,7 +959,7 @@ export const SCProfilePage = styled.div`
         border-radius: 5px;
         height: 2px;
         width: 70%;
-        background-color: var(--prime-color);
+        background-color: ${(props) => props.theme.colors.primeColor};
         position: absolute;
         top: 50%;
         left: 50%;
@@ -972,7 +972,7 @@ export const SCProfilePage = styled.div`
         border-radius: 5px;
         width: 2px;
         height: 70%;
-        background-color: var(--prime-color);
+        background-color: ${(props) => props.theme.colors.primeColor};
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1004,14 +1004,14 @@ export const SCProfilePage = styled.div`
   transition: 200ms;
 
   &:hover {
-    background-color: var(--light-gray);
+    background-color: ${(props) => props.theme.colors.lightGray};
   }
 
   &::before {
     content: "";
     height: 1px;
     width: 100%;
-    background-color: var(--light-gray);
+    background-color: ${(props) => props.theme.colors.lightGray};
 
     position: absolute;
     top: -8px;
@@ -1042,7 +1042,7 @@ export const SCProfilePage = styled.div`
     }
 
     .reply {
-      color: var(--prime-color);
+      color: ${(props) => props.theme.colors.primeColor};
       font-size: calc(0.4vw + 8px); //? 14 - 1440 | 16 - 1920
     }
   }
@@ -1051,7 +1051,7 @@ export const SCProfilePage = styled.div`
     position: absolute;
     top: 15px;
     right: 15px;
-    color: var(--gray);
+    color: ${(props) => props.theme.colors.gray};
     font-size: calc(0.4vw + 8px); //? 14 - 1440 | 16 - 1920
   }
 
@@ -1064,19 +1064,19 @@ export const SCProfilePage = styled.div`
     width: 22px;
 
     fill: none;
-    stroke: var(--dark-gray);
+    stroke: ${(props) => props.theme.colors.darkGray};
     stroke-width: 2px;
 
     transition: 200ms;
 
     &._active {
-      fill: var(--red);
+      fill: ${(props) => props.theme.colors.red};
       stroke: none;
     }
 
     &:hover {
       stroke: none;
-      fill: var(--prime-color);
+      fill: ${(props) => props.theme.colors.primeColor};
     }
   }
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SCLoginPage = styled.div`
+export const SCRegistrationPage = styled.div`
   box-shadow: 0 0 10px ${(props) => props.theme.colors.lightGray};
   border-radius: 20px;
   background-color: ${(props) => props.theme.colors.elemsBgc};
@@ -9,7 +9,7 @@ export const SCLoginPage = styled.div`
   max-width: 500px;
   text-align: center;
   padding: 40px;
-// все цвета как lightGray
+
   h1 {
     margin-bottom: 50px;
   }
@@ -47,9 +47,8 @@ export const SCLoginPage = styled.div`
     }
   }
 
-
 @media (max-width: 530px) {
-  .LoginPage {
+  .RegistrationPage {
     width: 100%;
   }
 }

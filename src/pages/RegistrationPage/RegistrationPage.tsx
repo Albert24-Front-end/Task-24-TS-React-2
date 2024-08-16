@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Input, Button, Heading, RegistrationInfo } from "../../components"
 import { Link } from "react-router-dom";
+import { SCRegistrationPage } from "./RegistrationPage.styled";
 
 export const RegistrationPage = () => {
     // const [name_surname, setName_surname] = useState("");
@@ -18,7 +19,7 @@ export const RegistrationPage = () => {
     //         : setButtonError(true)
     // }, [name_surname, age, city, email, phone, password])
     return (
-        <div className="LoginPage">
+      <SCRegistrationPage>
       <Heading variant={"h1"} text={"Регистрация"}/>
       <form action="#">
         <Input type={"text"} placeholder={"Имя и фамилия"}/>
@@ -29,6 +30,6 @@ export const RegistrationPage = () => {
         <Input type={"password"} placeholder={"Пароль"}/>
         <Button type={"button"} text={"Зарегистрироваться"}/>
       </form>
-      </div>
+      </SCRegistrationPage>
     );
 };
