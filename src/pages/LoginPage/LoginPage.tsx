@@ -1,16 +1,18 @@
-import { Input, Button, Heading, RegistrationInfo } from "../../components"
+import { Heading, RegistrationInfo } from "../../components"
 import { Link } from "react-router-dom";
 import { SCLoginPage } from "./LoginPage.styled";
+import LoginForm from "../../components/LoginForm";
 
 export const LoginPage = () => {
   return (
     <SCLoginPage>
       <Heading variant={"h1"} text={"Авторизация"}/>
-      <form action="#">
+      <LoginForm/>
+      {/* <form action="#">
         <Input type={"tel"} placeholder={"Номер телефона"}/>
         <Input type={"password"} placeholder={"Пароль"}/>
         <Link to="/main"><Button type={"button"} text={"Войти"}/></Link>
-      </form>
+      </form> */}
       <Link to="/">Забыли пароль?</Link>
       <RegistrationInfo
       authWithText={"Войти с помощью"}

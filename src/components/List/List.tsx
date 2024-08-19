@@ -1,5 +1,6 @@
 import Heading from "../typography/Heading/Heading";
 import ListItem from "./ListItem";
+import MusicItem from "./MusicItem";
 import {listData} from "./Data"
 
 const { subscribes, closeFriends, music } = listData
@@ -39,13 +40,13 @@ const List =({listType}: ListProps)=>{
           <Heading variant="h2" text="Вы недавно слушали"/>
             <span className="count">{music ? music.length : ""}</span>
           </div>
-          {music && music.map((musicElem)=>(
-            <ListItem
-            imgUrl={musicElem.imgUrl}
-            alt={musicElem.alt}
-            mainText={musicElem.mainText}
-            secondaryText={musicElem.secondaryText}
-            isActive={musicElem.isActive}
+          {music && music.map((musicItem)=>(
+            <MusicItem
+            imgUrl={musicItem.imgUrl}
+            alt={musicItem.alt}
+            mainText={musicItem.mainText}
+            secondaryText={musicItem.secondaryText}
+            isActive={musicItem.isActive}
             />
           ))}
         </div>

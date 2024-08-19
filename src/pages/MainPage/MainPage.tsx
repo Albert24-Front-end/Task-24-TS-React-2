@@ -18,7 +18,6 @@ export const MainPage = () => {
       <aside className="RightSide">
       <List listType="closeFriends"/>
       <List listType="music"/>
-       
       </aside>
     </SCMainPage>
   );
