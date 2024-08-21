@@ -8,11 +8,6 @@ export const LoginPage = () => {
     <SCLoginPage>
       <Heading variant={"h1"} text={"Авторизация"}/>
       <LoginForm/>
-      {/* <form action="#">
-        <Input type={"tel"} placeholder={"Номер телефона"}/>
-        <Input type={"password"} placeholder={"Пароль"}/>
-        <Link to="/main"><Button type={"button"} text={"Войти"}/></Link>
-      </form> */}
       <Link to="/">Забыли пароль?</Link>
       <RegistrationInfo
       authWithText={"Войти с помощью"}

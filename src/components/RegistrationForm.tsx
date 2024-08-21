@@ -40,7 +40,10 @@ const RegistrationForm = () => {
     })
     const navigate =useNavigate();
     
-    const onSubmit: SubmitHandler<RegistrationForm> = (data) => {navigate("/main")};
+    const onSubmit: SubmitHandler<RegistrationForm> = (data) => {
+      console.log(data);
+      navigate("/main")
+    };
   
     return (
       <form onSubmit={handleSubmit(onSubmit)}>

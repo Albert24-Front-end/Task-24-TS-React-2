@@ -4,6 +4,7 @@ import * as yup from "yup"
 import Input from "./UI/input/Input";
 import Button from "./UI/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { useLoginUserMutation } from "../store/API/authAPI";
 
 const schema = yup
   .object({
@@ -29,8 +30,16 @@ const LoginForm =()=> {
       }
     })
     const navigate =useNavigate();
+    const [ loginUser, {data}] = useLoginUserMutation();
 
-    const onSubmit: SubmitHandler<LoginForm> = (data) => {navigate("/main")};
+    const onSubmit: SubmitHandler<LoginForm> = (data) => {
+      console.log(data);
+      loginUser({email: data.email, password: data.password});
+      // navigate("/main")
+    };
+
+    console.log("User data", data)
+
   
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
