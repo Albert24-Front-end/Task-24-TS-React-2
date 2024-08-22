@@ -6,13 +6,14 @@ interface RegistrationInfo {
   linkText: string;
   hasAccountText: string;
   authWithText: string;
+  navigatePath: string;
 }
 
-const RegistrationInfo = ({linkText, hasAccountText, authWithText}: RegistrationInfo)=> {
+const RegistrationInfo = ({linkText, hasAccountText, authWithText, navigatePath}: RegistrationInfo)=> {
     return (
         <div className="registration">
         <Span>
-         {hasAccountText} <Link to="/">{linkText}</Link>
+         {hasAccountText} <Link to={navigatePath}>{linkText}</Link>
         </Span>
         {/* p & img заменить на компоненты */}
         <Paragraph>{authWithText}</Paragraph>

@@ -12,7 +12,8 @@ export const LoginPage = () => {
       <RegistrationInfo
       authWithText={"Войти с помощью"}
       hasAccountText={"У вас нет аккаунта?" }
-      linkText={"Зарегистрироваться"}/>
+      linkText={"Зарегистрироваться"}
+      navigatePath="/registration"/>
     </SCLoginPage>
   );
 };

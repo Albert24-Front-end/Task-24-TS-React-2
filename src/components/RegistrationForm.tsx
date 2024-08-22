@@ -4,6 +4,7 @@ import * as yup from "yup"
 import Input from "./UI/input/Input";
 import Button from "./UI/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { useRegisterUserMutation } from "../store/API/authAPI";
 
 const schema = yup
   .object({
@@ -11,7 +12,7 @@ const schema = yup
     age: yup.number().positive().integer().required("Обязательное поле для ввода"),
     city: yup.string().required("Обязательное поле для ввода"),
     email: yup.string().email("Введите почту в правильном формате").required("Обязательное поле для ввода"),
-    phone: yup.number().positive().integer().required("Обязательное поле для ввода"),
+    phone: yup.string().matches(/^\+?[1-9]\d{1,14}$/, "Введите телефон в правильном формате").required("Обязательное поле для ввода"),
     password: yup.string().required("Обязательное поле для ввода").min(8, "Минимум 8 символов").max(16, "Максимум 16 символов"),
   })
  
@@ -20,7 +21,7 @@ interface RegistrationForm {
     age: number;
     city: string;
     email: string;
-    phone: number;
+    phone: string;
     password: string
 }
 
@@ -36,14 +37,21 @@ const RegistrationForm = () => {
         city: "",
         email: "",
         password: "",
+        phone: "",
       }
     })
     const navigate =useNavigate();
+    const [ registerUser, {data}] = useRegisterUserMutation();
     
     const onSubmit: SubmitHandler<RegistrationForm> = (data) => {
       console.log(data);
-      navigate("/main")
+      registerUser({email: data.email, password: data.password, name: data.firstNameSurname, user_city: data.city, phone_number: data.phone,});
+      if ( data ) {
+        navigate("/main")
+      }
+      // navigate("/main")
     };
+    console.log("User data", data)
   
     return (
       <form onSubmit={handleSubmit(onSubmit)}>

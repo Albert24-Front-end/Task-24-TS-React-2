@@ -17,9 +17,10 @@ export const RegistrationPage = () => {
         <Button type={"button"} text={"Зарегистрироваться"}/>
       </form> */}
       <RegistrationInfo
-      authWithText={"Войти с помощью"}
-      hasAccountText={"У вас нет аккаунта?" }
-      linkText={"Зарегистрироваться"}/>
+      authWithText={"Войти"}
+      hasAccountText={"У вас уже есть аккаунт?" }
+      linkText={"Зарегистрироваться с помощью"}
+      navigatePath="/"/>
       </SCRegistrationPage>
     );
 };

@@ -26,6 +26,10 @@ function App() {
       path: "/profile",
       element: <ProfilePage />,
     },
+    {
+      path: "/registration",
+      element: <RegistrationPage />,
+    },
     
   ])
   return (

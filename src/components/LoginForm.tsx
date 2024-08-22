@@ -29,12 +29,15 @@ const LoginForm =()=> {
         password: "",
       }
     })
-    const navigate =useNavigate();
+    const navigate = useNavigate();
     const [ loginUser, {data}] = useLoginUserMutation();
 
     const onSubmit: SubmitHandler<LoginForm> = (data) => {
       console.log(data);
       loginUser({email: data.email, password: data.password});
+      if ( data ) {
+        navigate("/main")
+      }
       // navigate("/main")
     };
 
